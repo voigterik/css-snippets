@@ -1,0 +1,51 @@
+.b-menu-icon {
+    position: relative;
+    width: 1rem;
+    height: .95rem;
+    display: block;
+    border-top: 3px solid;
+    border-bottom: 3px solid;
+    border-color: inherit;
+    border-radius: 3px;
+    transition: all .125s ease-in-out;
+
+    &.m-active {
+        border: 3px solid transparent;
+        transform: scale(1.1);
+
+        &:before, &:after {
+            position: absolute;
+            top: 5px;
+            left: -2px;
+            content: "";
+            width: 1rem;
+            height: 2px;
+            background: #FFF;
+            border-radius: 5px;
+            transform: rotate(45deg);
+        }
+
+        &:after {
+            transform: rotate(-45deg);
+        }
+
+        &:hover {
+            transform: rotate(0) scale(1.3);
+        }
+    }
+
+    &:before {
+        position: absolute;
+        content: "";
+        top: 3px;
+        left: -2px;
+        width: 20px;
+        height: 3px;
+        background: inherit;
+    }
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.2) rotate(-30deg);
+    }
+}
